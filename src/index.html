@@ -2,13 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ProfilePageSpaPwa</title>
+  <title>Claudiu Lazar's Website</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Claudiu Lazar's Website... more a kind of landing page" />
+  <meta property="og:image" content="https://images.vreauoprogramare.ro/owner/me1.jpg" />
+  <meta property="og:title" content="Claudiu Lazar's Website" />
+  <meta name="theme-color" content="#212830">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      background: #212830;
+    }
+    .lds-facebook {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      height: 64px;
+      position: absolute;
+      right: 0;
+      bottom: 20%;
+      height: 16px;
+      text-align: center;
+      z-index: 9999;
+      color: #666;
+      font-size: 30px;
+    }
+    .lds-facebook div {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      width: 13px;
+      background: #fff;
+      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+    .lds-facebook div:nth-child(1) {
+      left: -23px;
+      animation-delay: -0.24s;
+    }
+    .lds-facebook div:nth-child(2) {
+      animation-delay: -0.12s;
+    }
+    .lds-facebook div:nth-child(3) {
+      left: 23px;
+      animation-delay: 0;
+    }
+    @keyframes lds-facebook {
+      0% {
+        top: 6px;
+        height: 51px;
+      }
+      50%, 100% {
+        top: 19px;
+        height: 26px;
+      }
+    }
+
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <app-root><div class="lds-facebook"><div></div><div></div><div></div></div></app-root>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<div class="section-4 text-center" id="technologies">
+  <div class="container">
+    <div class="row">
+      <h3 class="col-12">Technologies that I used or played with:</h3>
+      <ul class="col-xs-12 col-sm-6 col-md-3">
+        <div *ngFor="let tech of technologies ; let i = index">
+          <li *ngIf="i<11">
+            {{tech}}
+          </li>
+        </div>
+      </ul>
+      <ul class="col-xs-12 col-sm-6 col-md-3">
+        <div *ngFor="let tech of technologies ; let i = index">
+          <li *ngIf="i>10 && i<22">
+            {{tech}}
+          </li>
+        </div>
+      </ul>
+      <ul class="col-xs-12 col-sm-6 col-md-3">
+        <div *ngFor="let tech of technologies ; let i = index">
+          <li *ngIf="i>21 && i<33">
+            {{tech}}
+          </li>
+        </div>
+      </ul>
+      <ul class="col-xs-12 col-sm-6 col-md-3">
+        <div *ngFor="let tech of technologies ; let i = index">
+          <li *ngIf="i>32 && i<45">
+            {{tech}}
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
