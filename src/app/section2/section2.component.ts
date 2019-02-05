@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-section2',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Section2Component implements OnInit {
 
-  constructor() { }
+  @ViewChild('elements') elements: ElementRef;
+
+  constructor(private renderer: Renderer2) {
+  }
 
   ngOnInit() {
+  }
+
+  addAnimation() {
+    this.renderer.addClass(this.elements.nativeElement, 'fadeInUp');
   }
 
 }

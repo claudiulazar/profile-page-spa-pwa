@@ -1,35 +1,31 @@
 <div class="section-4 text-center" id="technologies">
-  <div class="container">
-    <div class="row">
-      <h3 class="col-12">Technologies that I used or played with:</h3>
-      <ul class="col-xs-12 col-sm-6 col-md-3">
-        <div *ngFor="let tech of technologies ; let i = index">
-          <li *ngIf="i<11">
-            {{tech}}
-          </li>
+  <div class="techs">
+    <h1>Some technologies that I have used</h1>
+    <div #cards class="cards">
+      <div class="card text-left" *ngFor="let tech of technologies" (mouseover)="pause = true" (mouseleave)="pause = false" >
+        <header><h2 class="title">{{tech.name}}</h2></header>
+        <img class="icon"
+             [src]="'https://storage.googleapis.com/images.vreauoprogramare.ro/claudiu-lazar/' + tech.name +'.png'"
+             width="150px">
+        <div [ngClass]="tech.level" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+             aria-valuemax="100">
+          {{tech.level | uppercase}}
         </div>
-      </ul>
-      <ul class="col-xs-12 col-sm-6 col-md-3">
-        <div *ngFor="let tech of technologies ; let i = index">
-          <li *ngIf="i>10 && i<22">
-            {{tech}}
-          </li>
+        <div class="description">
+          <div *ngIf="tech.level === 'beginner'">
+            I played with this tech a little or it was way back.
+          </div>
+          <div *ngIf="tech.level === 'medium'">
+            I used this technology for some project and I finished the job.
+          </div>
+          <div *ngIf="tech.level === 'good'">
+            I kinda know what I'm doing with this one.
+          </div>
+          <div *ngIf="tech.level === 'expert'">
+            This tech is pure love. Can talk a lot about it <3.
+          </div>
         </div>
-      </ul>
-      <ul class="col-xs-12 col-sm-6 col-md-3">
-        <div *ngFor="let tech of technologies ; let i = index">
-          <li *ngIf="i>21 && i<33">
-            {{tech}}
-          </li>
-        </div>
-      </ul>
-      <ul class="col-xs-12 col-sm-6 col-md-3">
-        <div *ngFor="let tech of technologies ; let i = index">
-          <li *ngIf="i>32 && i<45">
-            {{tech}}
-          </li>
-        </div>
-      </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -75,12 +75,12 @@ export class Section1Component implements OnInit {
     });
   }
 
-  generateRandomWidth() {
-    return Math.floor(Math.random() * (window.innerWidth - 50));
+  private generateRandomWidth(): number {
+    return Math.floor(Math.random() * (window.innerWidth - 100));
   }
 
-  generateRandomHeight() {
-    return Math.floor(Math.random() * (window.innerHeight - 50));
+  private generateRandomHeight(): number {
+    return Math.floor(Math.random() * (window.innerHeight - 100));
   }
 
 }

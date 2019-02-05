@@ -1,27 +1,68 @@
 .section-2 {
   min-height: 50vh;
   width: 100%;
-  background: #cbcbcb;
-  padding: 10px;
-  padding-top: 7vh;
-  padding-bottom: 7vh;
+  background: #121016;
+  @media (min-width: 769px) {
+    padding: 10%;
+  }
+  .container {
+    .animated {
+      opacity: 0;
+    }
+  }
+}
+.about-me {
+  max-width: 1000px;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 740px) {
+  h3{
+    font-size: 2rem;
+  }
+}
+h3 {
+  font-weight: 600;
+  color: #fefefe;
 }
 
 .text {
-  color: #212830;
+  color: #f5f5f5;
 }
 
-.image-cropper {
-  margin-top: 7vh;
-  width: auto;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
+.profile {
+  //height: 100%;
+  width: 200px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-img {
-  display: inline;
-  margin: 0 auto;
+.card {
+  width: 100%;
+  background: #272233;
+  -webkit-box-shadow: 0 0 2rem #000;
+  box-shadow: 0 0 2rem #000;
+  border-radius: 0;
+  @media (min-width: 769px) {
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+}
+
+.card-header {
+  border-bottom: 1px solid #e74343;
+}
+.right-side {
+  color: #fefefe;
   height: 100%;
-  width: auto;
+  width: 100%;
 }

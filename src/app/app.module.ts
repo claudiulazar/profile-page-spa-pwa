@@ -10,6 +10,7 @@ import { Section4Component } from './section4/section4.component';
 import { Section5Component } from './section5/section5.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import {AppearDirective} from './directives/appear.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavComponent } from './nav/nav.component';
     Section4Component,
     Section5Component,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    AppearDirective
   ],
   imports: [
     BrowserModule,

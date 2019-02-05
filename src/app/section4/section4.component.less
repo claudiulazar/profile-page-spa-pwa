@@ -1,18 +1,118 @@
 .section-4 {
+  padding-top: 120px;
   min-height: 40vh;
   width: 100%;
-  background: #313c45;
+  background: #121016;
   color: #e3e3e3;
 }
 
-.container {
-  padding-top: 7vh;
-  padding-bottom: 7vh;
+h1 {
+  color: #fefefe;
+  font-size: 1.5rem;
 }
 
-h3 {
-  padding-bottom: 7vh;
+@media (min-width: 740px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
-ul {
-  list-style-type: none;
+
+.techs {
 }
+
+.cards {
+  display: flex;
+  overflow-x: scroll;
+  padding: 150px;
+}
+
+.card {
+  min-width: 200px;
+  min-height: 300px;
+  padding: 1.5rem;
+  border-radius: 0;
+  background: #272233;
+  -webkit-box-shadow: -1rem 0 3rem #000;
+  box-shadow: -1rem 0 3rem #000;
+  display: flex;
+  position: relative;
+  -webkit-transition: transform 300ms; /* For Safari 3.1 to 6.0 */
+  transition: transform 300ms;
+  overflow: visible;
+  cursor: pointer;
+  animation: slide 10s linear infinite;
+  @media (min-width: 769px) {
+    border-radius: 16px;
+  }
+  @media (min-width: 1025px) {
+    min-width: 280px;
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card:not(:first-child) {
+    margin-left: -130px
+  }
+
+  .card:hover {
+    border: 3px solid #eb6606;
+    transform: translate(-120px, -50px);
+  }
+}
+
+.icon {
+  margin: auto;
+
+  @media (max-width: 1025px) {
+    width: 70%;
+  }
+}
+
+@keyframes card-preview {
+  from {
+  }
+
+  100% {
+    -webkit-transform: translate(0, -1rem);
+    transform: translate(0, -1rem);
+  }
+}
+
+.title {
+  margin-bottom: auto;
+  font-size: 20px;
+  margin: .25rem 0 auto 0;
+  font-weight: 800;
+}
+
+.description {
+  margin-bottom: 0;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    height: 60px;
+  }
+}
+
+#style-1::-webkit-scrollbar {
+  width: 6px;
+  background-color: #121016;
+}
+
+
+.beginner {
+  background: rgba(154, 1, 1, 1);
+}
+
+.medium {
+  background: rgb(224, 226, 44);
+}
+
+.good {
+  background: rgba(25, 50, 226, 1);
+}
+
+.expert {
+  background: rgba(0, 157, 2, 1);
+}
+
